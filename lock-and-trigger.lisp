@@ -41,7 +41,6 @@
     (or trigger *trigger-file-found*)))
 
 (defun create-trigger-file(file-name &optional (msg "stop this script"))
-;; TODO -- use with-open-file
   (let* ((pathname (make-pathname :name (concatenate 'string file-name ".trg")))
          (trigger (open pathname
                         :direction :output
